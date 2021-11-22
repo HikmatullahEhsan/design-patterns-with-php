@@ -1,6 +1,6 @@
 <?php 
 /**
-* Bridge Design Pattern implemenation in PHP
+* Bridge Design Pattern implementation in PHP
 * Date: 2021-02-17
 * Author: Hekmatullah Ehsan
 * Bridge Design Pattern: is used when we need to decouple an abstraction form its implementation so that the two can 
