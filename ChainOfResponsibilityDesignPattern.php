@@ -1,14 +1,14 @@
 <?php 
 /**
-* Chain of Responsibility Design Pattern implemenation in PHP
+* Chain of Responsibility Design Pattern implementation in PHP
 * Date: 2021-02-15
 * Author: Hekmatullah Ehsan
-* Chain of Responsibility Design Pattern: As the name suggests the chain of responsiblity pattern creates a chain of 
-receiver objects for  objects for a request. This pattern decouples sender and receiver of a request based on type 
-of request. This pattern comes under behavioural patterns. 
+* Chain of Responsibility Design Pattern: As the name suggests the chain of responsibility pattern creates a chain of 
+* receiver objects for  objects for a request. This pattern decouples sender and receiver of a request based on type 
+* of request. This pattern comes under behavioral patterns. 
 */
 
-class Httprequest {
+class HttpRequest {
 
 	private $name     = null; 
 	private $password = null; 
@@ -44,7 +44,7 @@ abstract class Handler {
 
 	}
 
-	public abstract function doHandle(Httprequest $request);
+	public abstract function doHandle(HttpRequest $request);
 
 }
 
@@ -68,7 +68,7 @@ class Compressor extends Handler {
 		parent::__construct($next);
 	}
 
-	public function doHandle(Httprequest $request) {
+	public function doHandle(HttpRequest $request) {
 	   echo "Compressing \n";
        return false; 
 	}
@@ -81,7 +81,7 @@ class Logger extends Handler {
 		parent::__construct($next);
 	}
 
-	public function doHandle(Httprequest $request) {
+	public function doHandle(HttpRequest $request) {
 	   echo "Logging \n";
        return false; 
 	}
@@ -106,7 +106,7 @@ $logger        = new Logger($compressor);
 $authenticator = new Authenticator($logger);
 
 $server        = new WebServer($authenticator);
-$server->handle(new Httprequest(['name'=>'Admin', 'password'=>'12345']));
+$server->handle(new HttpRequest(['name'=>'Admin', 'password'=>'12345']));
 
 
 
