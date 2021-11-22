@@ -1,6 +1,6 @@
 <?php 
 /**
-* Decorator Design Pattern implemenation in PHP
+* Decorator Design Pattern implementation in PHP
 * Date: 2021-01-19
 * Author: Hekmatullah Ehsan
 * Decorator Design Pattern : add new behaviors to existing objects by placing these objects inside 
@@ -13,11 +13,11 @@ interface Pizza {
 	public function getDesc(): string;
 }
 
-// Concrete Compenent
-class Vagiterian implements Pizza {
+// Concrete Component
+class Vegetarian implements Pizza {
 	public function getDesc(): string
 	{
-		return "Vagiterian";
+		return "Vegetarian";
 	}
 }
 
@@ -66,7 +66,7 @@ function makingPizza(Pizza $pizza)
 	echo $pizza->getDesc();
 }
 
-$pizza = new Vagiterian(); // create pizza object
+$pizza = new Vegetarian(); // create pizza object
 $pizza = new ExtraCheese($pizza); // create a decorator object by passing the pizza object
 $pizza = new Jalapeno($pizza); // create a decorator object by passing the pizza object
 
