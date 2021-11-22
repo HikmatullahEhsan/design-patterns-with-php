@@ -1,16 +1,16 @@
 <?php 
 /**
-* Singleton Design Pattern implemenation in PHP
+* Singleton Design Pattern implementation in PHP
 * Date: 2021-01-14
 * Author: Hekmatullah Ehsan
-* Singleton Design Pattern : the ability to create only one instiation from a class
+* Singleton Design Pattern : the ability to create only one instantiation from a class
 */
 
 class DbConnection {
 
 	private static $instance;
     
-    // make constructor private despite create class Object by 'new keyword'
+	// make constructor private despite create class Object by 'new keyword'
 	private function __construct() {
 	}
     
@@ -18,7 +18,7 @@ class DbConnection {
 	// create an Object through static method rather than 'new keyword'  
 	public static function getInstance() {
         
-        // check if the connection maybe has previous instance, if it isn't so create new one
+		// check if the connection maybe has previous instance, if it isn't so create new one
 		if (!(self::$instance instanceof DbConnection)) {
 
 		    self::$instance = new DbConnection();
