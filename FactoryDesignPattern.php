@@ -1,24 +1,24 @@
 <?php
  
 /**
-* Factory Design Pattern implemenation in PHP
+* Factory Design Pattern implementation in PHP
 * Date: 2021-01-14
 * Author: Hekmatullah Ehsan
 * Factory Design Pattern : Provides interface for creating objects in superclasses, but 
 * allows subclass to alter the type of objects that will be created,
-* and seperates the object creation code from code which uses the product
+* and separates the object creation code from code which uses the product
 */
 
 // The Product interface declares the operations for all concrete product
 interface Call{
 	public function connect(): void;
 	public function dial(): void;
-	public function endconnect(): void;
+	public function endConnect(): void;
 }
 
 
 // ViberCalling class implements Call interface
-// Concrete product porviding implemenations of Product interface
+// Concrete product providing implementations of Product interface
 class ViberCalling  implements Call {
 
 	public function connect():void {
@@ -29,13 +29,13 @@ class ViberCalling  implements Call {
 		echo "it is going to dial  with Viber Server \n";
 	}
 
-	public function endconnect():void {
+	public function endConnect():void {
 		echo "it is going to end the connection with Viber Server \n";
 	}
 }
 
 // WhatsAppCalling class implements Call interface
-// Concrete product porviding implemenations of Product interface
+// Concrete product providing implementations of Product interface
 class WhatsAppCalling implements Call{
 	public function connect():void {
 		echo "it is going to start and connect with WhatsApp Server \n";
@@ -45,13 +45,13 @@ class WhatsAppCalling implements Call{
 		echo "it is going to dial  with WhatsApp Server \n";
 	}
 
-	public function endconnect():void {
+	public function endConnect():void {
 		echo "it is going to end the connection with WhatsApp Server \n";
 	}
 }
 
 // TelegramCalling class implements Call interface
-// Concrete product porviding implemenations of Product interface
+// Concrete product providing implementations of Product interface
 class TelegramCalling implements Call{
 	public function connect():void {
 		echo "it is going to start and connect with Telegram Server \n";
@@ -61,7 +61,7 @@ class TelegramCalling implements Call{
 		echo "it is going to dial  with Telegram Server \n";
 	}
 
-	public function endconnect():void {
+	public function endConnect():void {
 		echo "it is going to end the connection with Telegram Server \n";
 	}
 }
@@ -77,7 +77,7 @@ abstract class Caller {
 		$transport = $this->getCallerAgency();
 		$transport->connect();
 		$transport->dial();
-		$transport->endconnect();
+		$transport->endConnect();
 	}
 
 }
@@ -89,7 +89,7 @@ abstract class Caller {
 */
 
 
-//The Concrete Creator or SubClass override the factory method & change the type of object created
+// The Concrete Creator or SubClass override the factory method & change the type of object created
 class ViberCaller extends Caller {
 
 	public function getCallerAgency(): Call
@@ -99,7 +99,7 @@ class ViberCaller extends Caller {
 
 }
 
-//The Concrete Creator or SubClass override the factory method & change the type of object created
+// The Concrete Creator or SubClass override the factory method & change the type of object created
 class WhatsAppCaller extends Caller{
 
 
@@ -110,7 +110,7 @@ class WhatsAppCaller extends Caller{
 
 }
 
-//The Concrete Creator or SubClass override the factory method & change the type of object created
+// The Concrete Creator or SubClass override the factory method & change the type of object created
 class TelegramCaller extends Caller{
 
 	public function getCallerAgency(): Call
