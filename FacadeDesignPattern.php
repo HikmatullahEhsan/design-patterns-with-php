@@ -1,12 +1,12 @@
 <?php 
 /**
-* Facade Design Pattern implemenation in PHP
+* Facade Design Pattern implementation in PHP
 * Date: 2021-01-22
 * Author: Hekmatullah Ehsan
 * Facade Design Pattern : Facade means front or face, we use the facade pattern to provide a simple interface to 
 * a complex system.
 */
-// Example: let suppose we send a push notificatin to mobile devices from server. 
+// Example: let suppose we send a push notification to mobile devices from server. 
 
 
 // Connection Class
@@ -83,4 +83,4 @@ class NotificationServices {
 
 
 
-(new NotificationServices())->send('hi, Whatsapp everyone?','798797-3242134');
+(new NotificationServices())->send('hi, Whats up everyone?','798797-3242134');
