@@ -1,6 +1,6 @@
 <?php 
 /**
-* Observer Design Pattern implemenation in PHP
+* Observer Design Pattern implementation in PHP
 * Date: 2021-01-23
 * Author: Hekmatullah Ehsan
 * Observer Design Pattern : define a subscription mechanism to notify the changes in one 
@@ -34,7 +34,7 @@ class MonthlyMagazine {
 
 	}
 
-	public function publishmagazine($magazine) {
+	public function publishMagazine($magazine) {
 		$this->magazine = $magazine; 
 		$this->notifySubscribers();
 	}
@@ -78,5 +78,5 @@ $publisher->registerSubscriber($subscriber1);
 $publisher->registerSubscriber($subscriber2);
 
 // Publish two magazine
-$publisher->publishmagazine("How to Debug Code in PHP?");
-$publisher->publishmagazine("CSS Anthology");
+$publisher->publishMagazine("How to Debug Code in PHP?");
+$publisher->publishMagazine("CSS Anthology");
