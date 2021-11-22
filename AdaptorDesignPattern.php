@@ -1,6 +1,6 @@
 <?php 
 /**
-* Adaptor Design Pattern implemenation in PHP
+* Adaptor Design Pattern implementation in PHP
 * Date: 2021-01-18
 * Author: Hekmatullah Ehsan
 * Adaptor Design Pattern : allows objects with incompatible interfaces to collaborate,
@@ -13,10 +13,10 @@ interface Charging {
 }
 
 
-// Adaptee/Service
+// Adoptee/Service
 class LaptopCharger {
-	public function laptopCharging(String $laptoopModel) {
-		echo "The charger used to charge the laptop: ' $laptoopModel'\n";
+	public function laptopCharging(String $laptopModel) {
+		echo "The charger used to charge the laptop: ' $laptopModel'\n";
 	}
 }
 
