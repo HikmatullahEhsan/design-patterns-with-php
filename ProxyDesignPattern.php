@@ -1,6 +1,6 @@
 <?php 
 /**
-* Proxy Design Pattern implemenation in PHP
+* Proxy Design Pattern implementation in PHP
 * Date: 2021-01-22
 * Author: Hekmatullah Ehsan
 * Proxy Design Pattern : proxy means agent or representative. it provides a substitute or placeholder for another object. A proxy controls 
@@ -13,10 +13,6 @@ interface Ebook {
 	public function countBookPage(string $bookName);
 }
 
-// echo (int) strlen('Hekmatullah Ehsan'); 
-// echo is_integer(strlen('Hekmatullah Ehsan')) ? "yes" : "no"; 
-
-// die();
 
 class Library {
 	public $books = [];
@@ -35,7 +31,7 @@ class Library {
 
 }
 
-// realebook class which implements ebook interface
+// RealEbook class which implements ebook interface
 class RealEbook implements Ebook {
 
 
@@ -45,8 +41,7 @@ class RealEbook implements Ebook {
 
 	public function countBookPage(string $bookName)
 	{
-       // implementation goes here for counting the book pages, for this we only the character of 
-	   // the book name
+	    //  implementation goes here for counting the book pages, for this we only the character of the book name
 	   return (int) strlen($bookName);
 	}
 
