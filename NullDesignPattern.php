@@ -1,6 +1,6 @@
 <?php 
 /**
-* NUll Design Pattern implemenation in PHP
+* NUll Design Pattern implementation in PHP
 * Date: 2021-01-26
 * Author: Hekmatullah Ehsan
 * NUll Design Pattern: it prevents the null exception error in objects.
@@ -28,7 +28,7 @@ class User {
 		return "Name: ". $this->name. ', Email: '. $this->email.", Age: ". $this->age . "\n";
 	}
     
-    // return object in string format
+	// return object in string format
 	public function __toString()
 	{
 		return (string) $this->id;
@@ -43,7 +43,7 @@ class NullUser {
 		return "There is no record found". "\n";
 	}
     
-    // return object in string format
+	// return object in string format
 	public function __toString()
 	{
 		return (string) $this->id;
