@@ -1,6 +1,6 @@
 <?php 
 /**
-* Active Record Design Pattern implemenation in PHP
+* Active Record Design Pattern implementation in PHP
 * Date: 2021-01-24
 * Author: Hekmatullah Ehsan
 * Active Record Design Pattern: The active-record pattern is a simple data-access method that maps a database 
