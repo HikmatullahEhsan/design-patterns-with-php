@@ -15,7 +15,7 @@ class DbConnection {
 	}
     
 
-    // create an Object through static method rather than 'new keyword'
+	// create an Object through static method rather than 'new keyword'  
 	public static function getInstance() {
         
         // check if the connection maybe has previous instance, if it isn't so create new one
