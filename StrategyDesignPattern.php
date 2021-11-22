@@ -1,6 +1,6 @@
 <?php 
 /**
-* Strategy Design Pattern implemenation in PHP
+* Strategy Design Pattern implementation in PHP
 * Date: 2021-01-19
 * Author: Hekmatullah Ehsan
 * Strategy Design Pattern : to use different variants of Algorithms within an object and be 
