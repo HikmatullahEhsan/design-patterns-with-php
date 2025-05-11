@@ -55,6 +55,6 @@ class Contact{
 }
 
 
-// Client code
+// Client code to execute
 $contact = new Contact(new MakeConnectionByEmail());
 echo $contact->contact();
